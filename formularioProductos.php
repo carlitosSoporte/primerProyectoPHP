@@ -48,16 +48,18 @@
                                 </div>
                             </div> 
                         </form>
-                        <?php
 
-                            if(isset($_POST["botonEnviar"])){
-                                $nombre = $_POST["nombreProducto"];
+
+                        <?php if(isset($_POST["botonEnviar"])):?>
+                            <?php
                                 $precio = $_POST["precioProducto"];
-                                $precio = $precio + 5000;
-                                echo("el producto es ".$nombre." y su precio es de $".$precio);
-                            }
-
-                        ?>
+                                $nombre = $_POST["nombreProducto"];
+                                
+                            ?>
+                            
+                            <h2 class="text-danger"> <?php echo($nombre)?></h2>
+                            <h2 class="text-danger"> <?php echo($precio)?></h2>
+                        <?php endif ?>
                     </div>           
                 </div>
             </div>
